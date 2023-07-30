@@ -1,6 +1,6 @@
 .PHONY: run clean
 
-hello.o:
+hello.o: hello.asm
 	nasm -f elf64 hello.asm -o hello.o
 hello: hello.o
 	ld hello.o -o hello
